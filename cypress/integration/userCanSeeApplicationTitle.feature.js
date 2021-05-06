@@ -4,7 +4,9 @@ describe('Application main view', () => {
   });
 
   it('contains titel', () => {
-    cy.get("section[name='title']")
-      .should('contain', 'GitHub Search engine')
+    cy.get("section[name='title']").should('contain', 'GitHub Search engine')
+      cy.get('[data-cy="input-name"]').should('exist')
   });
+
+  
 });
